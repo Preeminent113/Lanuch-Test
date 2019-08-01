@@ -16,6 +16,26 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+  
+  <?php
+$name = $_POST['name'];
+$visitor_email = $_POST['email'];
+$message = $_POST['message'];
+$email_form = 'vincent_green@hotmail.com';
+$email_subject = "New Form Submission";
+$email_body = "User Name: $name.\n".
+"User Email: $visitor_email.\n".
+"User Message: $message.\n";
+$to = "vincent_green@hotmail.com";
+$headers = "From: $email_form \r\n";
+$headers .="Reply-To: $visitor_email \r\n";
+mail($to,$email_subject,$email_body,$headers);
+header("Location: email.html");
+ ?>
+  
+  
+  
+  
 <style>
   body {}
 
