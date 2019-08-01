@@ -17,105 +17,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   
-  <?php
-$name = $_POST['name'];
-$visitor_email = $_POST['email'];
-$message = $_POST['message'];
-$email_form = 'vincent_green@hotmail.com';
-$email_subject = "New Form Submission";
-$email_body = "User Name: $name.\n".
-"User Email: $visitor_email.\n".
-"User Message: $message.\n";
-$to = "vincent_green@hotmail.com";
-$headers = "From: $email_form \r\n";
-$headers .="Reply-To: $visitor_email \r\n";
-mail($to,$email_subject,$email_body,$headers);
-header("Location: email.html");
- ?>
+
   
   
   
-  
-<!-- <style>
-  body {}
 
-.Feature-dotted{
-  border: dotted black 6px;
-  border-bottom: none;
-  width: 20%;
-  margin: auto;
-  margin-top: 10%;
-  margin-bottom: -10%;
-  /* position:fixed center;
-  align-items: baseline; */
-}
-
-.nav-item {
-  padding: 0 10px;
-}
-
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://rubengallego.house.gov/sites/rubengallego.house.gov/files/styles/congress_featured_image/public/featured_image/office_location/Office-Door-1Small.jpg?itok=7cfQCX8z");
-  padding: 250px;
-  text-align: center;
-  height: 100%;
-  color: white;
-  font-size: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.carousel-item {
-  padding: 2%;
-  text-align: center;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-
-.testArticle {
-  float: left;
-  padding-right: 400px;
-}
-
-.testArticleTwo {
-  float: right;
-  padding-left: 200px;
-}
-
-.LaunchInfo {
-  padding: 7% 15%;
-  /* text-align: center; */
-  background-color: #ef8172;
-  color: #fff;
-}
-
-.FeatureStories {
-  padding: 7% 15%;
-  /* text-align: center; */
-  background-color: #ef8172;
-  color: #fff;
-}
-
-footer {
-  text-align: center;
-  padding: 7% 15%;
-}
-
-.footer-Icon {
-  margin: 50px 70px;
-
-}
-  </style>
-  
-   -->
-  
-  
 
 </head>
 
